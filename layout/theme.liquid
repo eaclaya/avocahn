@@ -191,8 +191,13 @@
       }
     {% endstyle %}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambay&family=Domine&family=Playfair+Display&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    
     {{ 'base.css' | asset_url | stylesheet_tag }}
-
+    {{ 'app.css' | asset_url | stylesheet_tag }}
+    
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}

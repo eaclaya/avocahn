@@ -1,0 +1,25 @@
+{
+  "name": "avocahn",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eaclaya/avocahn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eaclaya/avocahn/issues"
+  },
+  "homepage": "https://github.com/eaclaya/avocahn#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "sass": "^1.52.1",
+    "sass-loader": "^12.6.0"
+  }
+}
