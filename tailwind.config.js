@@ -19,7 +19,8 @@ module.exports = {
       'brand-yellow': '#D8BE8C',
       'brand-gray': '#F3F3F3',
       'brand-green': '#4CA36F',
-      'brand-dark': '#393939'
+      'brand-dark': '#393939',
+      'brand-white': '#FFFFFF'
     }
   },
   plugins: [],

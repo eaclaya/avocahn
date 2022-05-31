@@ -457,8 +457,32 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.top-\[75px\] {
+  top: 75px;
+}
+.left-\[60px\] {
+  left: 60px;
+}
+.bottom-10 {
+  bottom: 2.5rem;
+}
 .isolate {
   isolation: isolate;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-72 {
+  margin-bottom: 18rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .mb-32 {
   margin-bottom: 8rem;
@@ -478,6 +502,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none;
 }
+.h-\[350px\] {
+  height: 350px;
+}
+.h-full {
+  height: 100%;
+}
 .h-\[500px\] {
   height: 500px;
 }
@@ -486,6 +516,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-full {
   width: 100%;
+}
+.w-\[350px\] {
+  width: 350px;
 }
 .w-1\/3 {
   width: 33.333333%;
@@ -499,8 +532,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-screen-xl {
   max-width: 1280px;
 }
+.max-w-\[980px\] {
+  max-width: 980px;
+}
+.max-w-screen-lg {
+  max-width: 1024px;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
 .max-w-\[370px\] {
   max-width: 370px;
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -517,13 +562,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-center {
   justify-content: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
+.gap-12 {
+  gap: 3rem;
+}
 .gap-8 {
   gap: 2rem;
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 .border {
   border-width: 1px;
@@ -535,14 +592,50 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(216 190 140 / var(--tw-bg-opacity));
 }
+.bg-brand-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .text-left {
   text-align: left;
+}
+.text-center {
+  text-align: center;
 }
 .align-bottom {
   vertical-align: bottom;
 }
+.font-roboto {
+  font-family: Roboto, serif;
+}
 .font-playfair {
   font-family: Playfair Display, serif;
+}
+.font-domine {
+  font-family: Domine, serif;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .text-8xl {
   font-size: 6rem;
@@ -563,6 +656,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .italic {
   font-style: italic;
+}
+.text-brand-green {
+  --tw-text-opacity: 1;
+  color: rgb(76 163 111 / var(--tw-text-opacity));
+}
+.text-brand-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.opacity-10 {
+  opacity: 0.1;
 }
 .outline {
   outline-style: solid;

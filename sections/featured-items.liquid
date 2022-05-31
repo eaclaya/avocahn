@@ -1,0 +1,55 @@
+<div class="flex flex-col justify-center items-center mb-72">
+    <div class="flex items-center max-w-screen-lg w-full gap-12">
+        {% for block in section.blocks %}
+            <div class="bg-brand-gray h-[350px] w-[350px] relative overflow-hidden">
+                {% if block.settings.featured_image != blank %}
+                    {{block.settings.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', class: 'opacity-10 absolute top-[75px] left-[60px]'}}
+                {% endif %}
+                <div class="flex flex-col h-full justify-center items-center">
+                    <h2 class="text-5xl font-domine max-w-sm text-center">{{block.settings.featured_text}}</h2>
+                </div>
+                <a href="{{block.settings.featured_link}}" class="absolute bottom-10 text-center w-full uppercase">Learn more</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% schema %}
+{
+   "name": "Featured Items",
+   "tag": "section",
+   "class": "featured__items",
+   "max_blocks": 3,
+   "blocks": [
+        {
+           "type": "column",
+           "name": "Column Items",
+           "settings": [
+               {
+                   "type": "image_picker",
+                   "id": "featured_image",
+                   "label": "Image"
+               },
+               {
+                "type": "text",
+                "id": "featured_text",
+                "label": "Description"
+               },
+               {
+                "type": "url",
+                "id": "featured_url",
+                "label": "Button Link"
+            }
+           ]
+        }
+   ],
+  "presets": [
+      {
+          "category": "Featured Items",
+          "name":"Featured Items",
+          "blocks": [{
+              "type": "column"
+          }]
+      }
+  ]
+}
+{% endschema %}

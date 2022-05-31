@@ -1,0 +1,16 @@
+{% if item and item != empty %}
+    <div class="bg-white border border-gray-300 px-2 pb-8">
+        <div class="group mb-4">
+            {{item.featured_image | image_url: width: 450 | image_tag: loading: 'lazy'}}
+        </div>
+        <div class="flex justify-between">
+            <p class="text-md font-roboto text-gray-700">{{item.title}}</p>
+            <p class="text-md text-brand-green">{{item.price | money}}</p>
+        </div>
+        <div class="product-tags-wrapper">
+            {% for tag in item.tags %}
+                <span class="bg-brand-yellow rounded-sm px-2 text-sm text-brand-white">{{tag}}</span>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
