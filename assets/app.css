@@ -460,8 +460,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .isolate {
   isolation: isolate;
 }
+.mb-32 {
+  margin-bottom: 8rem;
+}
 .block {
   display: block;
+}
+.flex {
+  display: flex;
 }
 .table {
   display: table;
@@ -472,13 +478,82 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none;
 }
+.h-\[500px\] {
+  height: 500px;
+}
+.h-\[62px\] {
+  height: 62px;
+}
+.w-full {
+  width: 100%;
+}
+.w-1\/3 {
+  width: 33.333333%;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-\[221px\] {
+  width: 221px;
+}
+.max-w-screen-xl {
+  max-width: 1280px;
+}
+.max-w-\[370px\] {
+  max-width: 370px;
+}
+.flex-col {
+  flex-direction: column;
+}
 .flex-wrap {
   flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.border {
+  border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.bg-brand-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 190 140 / var(--tw-bg-opacity));
+}
+.text-left {
+  text-align: left;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+.font-playfair {
+  font-family: Playfair Display, serif;
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.font-bold {
+  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
