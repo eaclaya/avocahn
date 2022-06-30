@@ -281,6 +281,10 @@
     "video": {
       "load_video": "Load video: {{ description }}"
     },
+    "toast": {
+      "name": "Toast",
+      "default": "Default notification"
+    },
     "slideshow": {
       "load_slide": "Load slide",
       "previous_slideshow": "Previous slide",

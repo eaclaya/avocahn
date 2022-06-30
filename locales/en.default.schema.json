@@ -332,6 +332,10 @@
     }
   },
   "sections": {
+    "toast": {
+      "name": "Toast",
+      "default": "Default notification"
+    },
     "all": {
       "padding": {
         "section_padding_heading": "Section padding",

@@ -1,0 +1,13 @@
+{{ 'toast.css' | asset_url | stylesheet_tag }}
+<div id="toast">
+    <p id="toast__description"></p>
+</div>
+
+<script>
+    function showToast(value = 'Default notification') {
+        var x = document.getElementById("toast")
+        x.className = "show";
+        document.getElementById('toast__description').innerHTML = value
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    }
+</script>

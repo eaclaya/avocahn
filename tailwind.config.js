@@ -20,7 +20,8 @@ module.exports = {
       'brand-gray': '#F3F3F3',
       'brand-green': '#4CA36F',
       'brand-dark': '#393939',
-      'brand-white': '#FFFFFF'
+      'brand-white': '#FFFFFF',
+      'brand-dark-gray': '#AAAAAA'
     }
   },
   plugins: [],

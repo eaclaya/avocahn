@@ -487,6 +487,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-32 {
   margin-bottom: 8rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .block {
   display: block;
 }
@@ -596,9 +599,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
+.bg-brand-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
+}
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pb-8 {
   padding-bottom: 2rem;
@@ -664,6 +675,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-brand-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-brand-dark-gray {
+  --tw-text-opacity: 1;
+  color: rgb(170 170 170 / var(--tw-text-opacity));
 }
 .opacity-10 {
   opacity: 0.1;

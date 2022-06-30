@@ -17,7 +17,27 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-
+<style>
+  .product-option-radio {
+    display: none;
+  }
+  .product-option-radio + label {
+    border: 1px solid #333;
+    text-align: center;
+    display: inline-block;
+    min-width: 40px;
+    border-radius: 10%;
+    padding: 0.5rem 1rem;
+  }
+  .product-option-radio:disabled + label {
+    color: #ccc;
+    text-decoration: line-through;
+  }
+  .product-option-radio:checked + label {
+    border: 1px solid #000;
+    font-weight: bold;
+}
+</style>
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -86,7 +106,7 @@
         <div class="card__content">
           <div class="card__information">
             <h3 class="card__heading"{% if card_product.featured_media == nil and settings.card_style == 'standard' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
-              <a href="{{ card_product.url }}" class="full-unstyled-link">
+              <a href="{{ card_product.url }}" class="product-link">
                 {{ card_product.title | escape }}
               </a>
             </h3>
@@ -103,10 +123,34 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_product.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_product.id }}"{% endif %}>
-            <a href="{{ card_product.url }}" class="full-unstyled-link">
+            <a href="{{ card_product.url }}" class="product-link">
               {{ card_product.title | escape }}
             </a>
           </h3>
+          
+          <variant-radios class="no-js-hidden has-quickadd" data-section="{{ section.id }}" data-url="{{ card_product.url }}"  >
+            {%- for option in card_product.options_with_values -%}
+                <fieldset class="js product-form__input" data-option-name="{{option.name}}">
+                  <legend class="form__label">{{ option.name }}</legend>
+                  {%- for value in option.values -%}
+                    <input type="radio" id="option__value-{{card_product.id}}-{{ value }}-{{ option.position }}-{{ forloop.index0 }}"
+                          name="{{ option.name }}"
+                          class="product-option-radio"
+                          value="{{ value | escape }}"
+                          form="{{ product_form_id }}"
+                          {% if option.selected_value == value %}checked{% endif %}
+                    >
+                    <label for="option__value-{{card_product.id}}-{{ value }}-{{ option.position }}-{{ forloop.index0 }}" class="product-option-label">
+                      {{ value }}
+                    </label>
+                  {%- endfor -%}
+                </fieldset>
+            {%- endfor -%}
+            <script type="application/json">
+              {{ card_product.variants | json }}
+            </script>
+          </variant-radios>
+
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -229,7 +273,7 @@
         <div class="card__content">
           <div class="card__information">
             <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="full-unstyled-link">
+              <a role="link" aria-disabled="true" class="product-link">
                 {{ 'onboarding.product_title' | t }}
               </a>
             </h3>
@@ -239,7 +283,7 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link">
+            <a role="link" aria-disabled="true" class="product-link">
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>
